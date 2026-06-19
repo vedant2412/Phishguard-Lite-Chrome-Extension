@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>PhishGuard Lite</title>
+
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>PhishGuard Lite</h1>
+      <p>Rule-based Gmail phishing scanner</p>
+    </header>
+
+    <button id="scanBtn">Scan Current Gmail Email</button>
+
+    <section id="result" class="result hidden">
+      <div class="score-row">
+        <span>Risk Score</span>
+        <strong id="score">0/100</strong>
+      </div>
+
+      <div class="verdict" id="verdict">Not scanned</div>
+
+      <div class="section">
+        <h2>Reasons</h2>
+        <ul id="reasons"></ul>
+      </div>
+
+      <div class="section">
+        <h2>Extracted IOCs</h2>
+        <ul id="iocs"></ul>
+      </div>
+    </section>
+
+    <p id="status" class="status">Open a Gmail email and click scan.</p>
+  </div>
+
+  <script src="detector.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
